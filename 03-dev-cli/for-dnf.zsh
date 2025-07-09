@@ -6,10 +6,13 @@
 dnf upgrade -y  # sudo -> cmd
 
 source ./03-dev-cli/_internal/_sdkman_setup.zsh
-sdkman_install_setup_java 21.0.4-amzn
+sdkman_install
+sdkman_setup_java 21.0.7-amzn
 
 source ./03-dev-cli/_internal/_pnpm_setup.zsh
-pnpm_install_setup_node_npm 20.17.0
+pnpm_install
+pnpm_setup_node_npm 24.4.0
+pnpm_insert_completions_to_zsh
 
 source ./03-dev-cli/_internal/_bun_setup.zsh
 bun_install

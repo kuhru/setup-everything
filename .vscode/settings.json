@@ -1,3 +1,10 @@
 {
-  "conventionalCommits.scopes": ["01-shell", "02-nvim", "03-dev-cli"]
+  "conventionalCommits.scopes": ["01-shell", "02-nvim", "03-dev-cli"],
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
 }

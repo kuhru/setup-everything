@@ -9,5 +9,5 @@ omz_install_setup() {
   # omz setup
 
   [[ -f "~/.zshrc" ]] && cp "~/.zshrc" "~/.zshrc.pre_omz_setup.bak"
-  cp ./01-shell/_zshrc_dump ~/.zshrc
+  cp ./01-shell/_dump/zshrc ~/.zshrc
 }

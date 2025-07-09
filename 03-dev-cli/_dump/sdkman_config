@@ -28,4 +28,4 @@ sdkman_debug_mode=false
 sdkman_insecure_ssl=false
 
 # check for newer versions and prompt for update
-sdkman_selfupdate_feature=false
+sdkman_selfupdate_feature=true

@@ -18,6 +18,8 @@ sets up nvim with some basic configuration, like highlighting and relative row n
 
 ## DEV CLI (03-dev-cli)
 
-downloads sdkman, to install java 21.0.2-amzn
+downloads sdkman, to install java 21.0.7-amzn
+> Search for 21.0.7-amzn if you want to install a different version
 
-downloads pnpm, to install node 20.12.0, and npm 10.5.0
+downloads pnpm, to install node 24.4.0
+> Search for 24.4.0 if you want to install a different version

@@ -10,6 +10,10 @@ sets up zsh and oh-my-zsh with a considerable quantity of plugins, that can be m
 
 ## NVIM (02-nvim)
 
+sets up git config defaults, like name, email, input style, editor.
+
+> Search for TODO before running these commands
+
 sets up nvim with some basic configuration, like highlighting and relative row numbering
 
 ## DEV CLI (03-dev-cli)

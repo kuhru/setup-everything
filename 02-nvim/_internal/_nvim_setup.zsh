@@ -10,7 +10,14 @@ nvim_install_setup() {
   mv squashfs-root /  # sudo -> cmd
   ln -s /squashfs-root/AppRun /usr/bin/nvim  # sudo -> cmd
   rm -rf nvim.appimage
+}
 
+nvim_prepare() {
   mkdir -p ~/.config/nvim
-  cp -r ./02-nvim/_dump/* ~/.config/nvim
+  cp -r ./02-nvim/_dump/nvim* ~/.config/nvim
+}
+
+vim_prepare() {
+  mkdir -p ~/.config
+  cp ./02-nvim/_dump/.vimrc ~/.config/.vimrc
 }

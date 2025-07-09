@@ -3,11 +3,11 @@
 # update and upgrade
 
 dnf upgrade -y  # sudo -> cmd
-# dnf upgrade -y && dnf install -y curl-minimal wget git nano which zip unzip tar findutils jq && mkdir ~/Documents && cd ~/Documents && git clone https://github.com/kuhru/setup-everything.git && cd setup-everything
+# dnf upgrade -y && dnf install -y curl-minimal wget git nano which zip unzip tar findutils jq && mkdir ~/Documents && cd ~/Documents && git clone https://github.com/kuhru/config-starter.git && cd config-starter
 
 # basic setup
 
-dnf install -y curl-minimal wget git nano which zip unzip tar findutils jq openssl lsof procps-n  # sudo -> cmd --skip-broken
+dnf install -y curl-minimal wget git nano which zip unzip tar findutils jq openssl lsof procps-n fzf # sudo -> cmd --skip-broken
 # nano 01-shell/for-dnf.sh
 # ./01-shell/for-dnf.sh
 

@@ -5,6 +5,16 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+# Download Oh My Zsh, if it's not there yet
+if [ ! -d "$ZSH" ]; then
+  CHSH=no RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && echo ""
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && echo ""
+  git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions && echo ""
+  git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab && echo ""
+  mkdir $ZSH_CUSTOM/completions
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -64,10 +74,14 @@ COMPLETION_WAITING_DOTS="true"  # modified_by_setter
 # see 'man strftime' for details.
 export HISTTIMEFORMAT="[%F %T]"  # modified_by_setter
 HIST_STAMPS="yyyy-mm-dd"  # modified_by_setter
+HIST_DUP=erase
 setopt INC_APPEND_HISTORY  # modified_by_setter
 setopt EXTENDED_HISTORY  # modified_by_setter
 setopt HIST_FIND_NO_DUPS  # modified_by_setter
 setopt HIST_IGNORE_ALL_DUPS  # modified_by_setter
+setopt HIST_IGNORE_DUPS  # modified_by_setter
+setopt HIST_SAVE_NO_DUPS  # modified_by_setter
+setopt HIST_FIND_NO_DUPS  # modified_by_setter
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -83,6 +97,8 @@ plugins=(
   colored-man-pages  # modified_by_setter
   docker  # modified_by_setter
   docker-compose  # modified_by_setter
+  fzf  # modified_by_setter
+  fzf-tab  # modified_by_setter
   helm  # modified_by_setter
   istioctl  # modified_by_setter
   kubectl  # modified_by_setter
@@ -122,6 +138,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 alias czsh="code ~/.zshrc"
 alias szsh="source ~/.zshrc"

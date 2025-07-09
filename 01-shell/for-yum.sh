@@ -3,12 +3,12 @@
 # update and upgrade
 
 yum upgrade -y
-# yum upgrade -y && yum install -y curl-minimal wget git nano which zip unzip tar findutils jq && mkdir ~/Documents && cd ~/Documents && git clone https://github.com/kuhru/setup-everything.git && cd setup-everything
+# yum upgrade -y && yum install -y curl-minimal wget git nano which zip unzip tar findutils jq && mkdir ~/Documents && cd ~/Documents && git clone https://github.com/kuhru/config-starter.git && cd config-starter
 
 # basic setup
 
-yum install -y curl-minimal wget git nano which zip unzip tar findutils jq openssl lsof procps-n
-# mkdir ~/Documents && cd ~/Documents && git clone https://github.com/kuhru/setup-everything.git && cd setup-everything
+yum install -y curl-minimal wget git nano which zip unzip tar findutils jq openssl lsof procps-n fzf
+# mkdir ~/Documents && cd ~/Documents && git clone https://github.com/kuhru/config-starter.git && cd config-starter
 # nano 01-shell/for-yum.sh
 # ./01-shell/for-yum.sh
 
